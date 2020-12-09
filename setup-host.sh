@@ -9,10 +9,8 @@ wal_level = hot_standby
 hot_standby = on
 ssl = on
 
-archive_mode = on
-archive_command = 'cp %p /var/lib/postgresql/walarchive/%f'
 max_wal_senders = 8
-wal_keep_segments = 8
+wal_keep_segments = 32
 
 ssl_ca_file = '/var/lib/postgresql/certs/root.crt'
 ssl_cert_file = '/var/lib/postgresql/certs/server.crt'
